@@ -1,0 +1,105 @@
+<!-- 
+Author: Nidhi Lunagariya
+Project: Simply Blogging
+ -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Blog</title>
+ 
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+     <link rel="stylesheet" href="style.css">
+     <script src="formSubmit.js"></script>
+ </head>
+ <body>
+     <!-- Nav Bar -->
+     <nav class="navbar navbar-light justify-content-center" style="background-color: #dbdbdb;">
+         <ul class="nav">
+             <li class="nav-item">
+                 <button class="btn btn-outline-dark me-2" type="button">Add a Blog</button>
+             </li>
+             <li class="nav-item">
+                 <button class="btn btn-outline-dark me-2" type="button">About Us</button>
+             </li>
+             <li class="nav-item">
+                 <button class="btn btn-outline-dark me-2" type="button">Contact Us</button>
+             </li>
+             <li class="nav-item">
+                 <button class="btn btn-outline-dark me-2" type="button">Login</button>
+             </li>
+         </ul>
+     </nav>
+ 
+     <div class="container">
+         <div class="row">
+            <div class="col-4">
+            </div>
+             <div class="col-5">
+                 <h1>Blog</h1>
+                 <h3>A simple blogging platform</h3>
+             </div>
+             <div class="col-4">
+             </div>
+         </div>
+     </div>
+ 
+     <div class="container">
+         <div class="addBlog">
+             <div class='row'>
+                 <div class='col'>
+                     <label class="formLabelTitle1" for="">Post a Blog</label>
+                 </div>
+             </div> 
+             <div class='row'>
+                <div class='col'>
+                    <label class="formLabelTitle" for=""></label>
+                </div>
+            </div>
+             <div class='row'>
+                 <div class='col'>
+                     <label class="formLabelTitle" for="">Title:</label>
+                 </div>
+                 <div class='col'>
+                     <input type="text" id="title" class="formInput">
+                 </div>
+             </div>
+             <div class='row'>
+                 <div class='col'>
+                     <label class="formLabelTitle" for="">Description:</label>
+                 </div>
+                 <div class='col'>
+                     <textarea name="desc" class="formInput" id="desc" cols="30" rows="5"></textarea>
+                 </div>
+             </div>
+             
+             <input type="button" value="Post" class="btn btn-outline-dark" onclick="getBlogData()">
+             <input type="button" value="Clear" class="btn btn-secondary" onclick="clearBlogForm()">
+         </div>
+ 
+         <div class="blogPosts">
+             <table class="blogPostTable">
+                 <thead>
+                     <th colspan=3 class="tableTitle">Recently Posted blog ....</th>
+                 </thead>
+                 <tbody>
+                 </tbody>
+             </table>
+         </div>
+         
+         <div class="container">
+             <div id="gridBlogLocation">
+                 
+             </div>
+         </div>
+     </div>
+     
+     <input type="button" value="Clear Local Storage" class="btn btn-outline-light" id="clearLS" onclick="clearLocalStorage()">
+ </body>
+ <script>
+     retreiveData()
+
+ </script>
+ </html>
